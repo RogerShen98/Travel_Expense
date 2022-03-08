@@ -1,16 +1,16 @@
 # Travel_Expense
 
-This program is designed and written by a team of students. Here are some suggestions:
+CODE IMPLEMENTATION
 
-• One student should design function main, which will call the other functions in the program. The remainder of the functions will be designed by other members of the team.
+gcc travel_expense.c expense
 
-• The requirements of the program should be analyzed so each student is given about the same workload.
+./expense
 
-• The parameters and return types of each function should be decided in advance.
+PROGRAM DETAIL
 
-• The program should be implemented as a multifile program. Each student in the group should have at least one file they are responsible for.
+This program is designed and written by a team of students.
 
-A program that calculates and displays the total travel expenses of a businessperson on a trip. The program should have functions that ask for and return the following:
+It calculates and displays the total travel expenses of a businessperson on a trip. The program should have functions that ask for and return the following:
 
 • The total number of days spent on the trip
 
@@ -48,8 +48,12 @@ The program should only ask for the amounts of allowable meals. (The company all
 
 The program should calculate and display:
 
-the total expenses incurred by the businessperson, the total allowable expenses for the trip, the excess that must be reimbursed by the businessperson, if any.
+the total expenses incurred by the businessperson, the total allowable expenses for the trip, the excess that must be reimbursed by the businessperson, if any. The amount saved by the businessperson if the expenses were under the total allowed.
 
-The amount saved by the businessperson if the expenses were under the total allowed.
+Input Validation:
 
-Input Validation: Do not accept negative numbers for any dollar amount or for miles driven in a private vehicle. Do not accept numbers less than 1 for the number of days. Only accept valid times for the time of departure and the time of arrival.
+Do not accept negative numbers for any dollar amount or for miles driven in a private vehicle.
+
+Do not accept numbers less than 1 for the number of days.
+
+Only accept valid times for the time of departure and the time of arrival.
