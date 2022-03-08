@@ -107,6 +107,8 @@ int main()
         printf("\nMiles driven, if a private vehicle was used: ");
         scanf("%f",&milesDriven);
     }
+
+    vehicleExpense = milesDriven * 0.27;
   
     // Parking fee
     printf("Parking Fee: $");
@@ -134,7 +136,7 @@ int main()
 
     while(registrationFee<0){
         printf("\nAmount cannot be negative!");
-        printf("\nTaxi Fee: $");
+        printf("\nConference or seminar registration fees: $");
         scanf("%f",&registrationFee);
     }
    
@@ -212,6 +214,23 @@ int main()
         printf("\nThe amounts of allowable meals: $");
         scanf("%f",&allowableMealAmount);
     }
+
+    printf("\n\nBelow is the information entered for the travel trip:");
+    printf("\n\nThe total number of days spent on the trip: %d days",day);
+    printf("\nThe time of departure on the first day of the trip: %s", departTime);
+    printf("\nThe time of arrival back home on the last day of the trip: %s", arrivalTime);
+    printf("\nThe amount of any round-trip airfare: $%f", airfareAmount);
+    printf("\nThe amount of any car rentals: $%f",carRentalAmount);
+    printf("\nMiles driven, if a private vehicle was used: %f miles",milesDriven);
+    printf("\nVehicle expense: $%f",vehicleExpense);
+    printf("\nParking fee: $%f",parkingFee);
+    printf("\nTaxi fee: $%f",taxiFee);
+    printf("\nConference or seminar registration fees: $%f",registrationFee);
+    printf("\nNumber of nights stayed in hotel: %d nights",nightStayed);
+    printf("\nHotel cost per night: $%f",hotelCost);
+    printf("\nTotal hotel cost: $%f",hotelCost*nightStayed);
+    printf("\nTotal meal expense: $%f",totalMealExpense);
+    printf("\nThe amounts of allowable meals: %f",allowableMealAmount);
 
 }
 
