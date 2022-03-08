@@ -1,6 +1,6 @@
 /* 
 CS2600 Project2: Travel Expenses
-Liangjie Shen
+Liangjie Shen: Main Function
 2/7/2022
 */
 
@@ -19,7 +19,7 @@ int main()
     int day = 0, counter = 0,nightStayed = 0;
     char departTime[10] = "", arrivalTime[10] = "", departTimeChar, arrivalTimeChar, airfare;
     float airfareAmount,carRentalAmount,milesDriven,vehicleExpense,parkingFee,taxiFee;
-    float hotelExpenses,allowableMealAmount,registrationFee;
+    float hotelCost,allowableMealAmount,registrationFee;
 
   
     // welcome message
@@ -55,7 +55,6 @@ int main()
             break;
         
     }
-
     // Arrival time input
 
     while(true){
@@ -88,7 +87,7 @@ int main()
         printf("The amount of any round-trip airfare: $");
         scanf("%f",&airfareAmount);
     }
-
+ 
     // Amount of car rental if any
     printf("The amount of any car rentals: ");
     scanf("%f",&carRentalAmount);
@@ -108,9 +107,7 @@ int main()
         printf("\nMiles driven, if a private vehicle was used: ");
         scanf("%f",&milesDriven);
     }
-
-    vehicleExpense = milesDriven*0.27;
-
+  
     // Parking fee
     printf("Parking Fee: $");
     scanf("%f",&parkingFee);
@@ -120,7 +117,7 @@ int main()
         printf("\nParking Fee: $");
         scanf("%f",&parkingFee);
     }
-
+   
     // Taxi fee
     printf("Taxi Fee: $");
     scanf("%f",&taxiFee);
@@ -130,7 +127,7 @@ int main()
         printf("\nTaxi Fee: $");
         scanf("%f",&taxiFee);
     }
-
+    
     // Conference or seminar registration fees
     printf("Conference or seminar registration fees: $");
     scanf("%f",&registrationFee);
@@ -140,8 +137,8 @@ int main()
         printf("\nTaxi Fee: $");
         scanf("%f",&registrationFee);
     }
-
-    // Hotel Expenses
+   
+    // Hotel nights stayed
     printf("Number of nights stayed in hotel:");
     scanf("%d",&nightStayed);
 
@@ -151,10 +148,19 @@ int main()
         scanf("%d",&nightStayed);
     }
 
+    // Hotel costs
+    printf("Hotel cost per night: $");
+    scanf("%f",&hotelCost);
+
+    while(hotelCost<0){
+        printf("\nAmount cannot be negative!");
+        printf("\nHotel cost per night: $");
+        scanf("%f",&hotelCost);
+    }
     
 
     // The amount of each meal eaten
-    float breakfastCost[day],lunchCost[day],dinnerCost[day];
+    float totalMealExpense;
     float breakfast,lunch,dinner;
     
     printf("Please enter the amount spent on each meal below:\n");
@@ -170,7 +176,7 @@ int main()
         while(breakfast<0){
             printf("Breakfast: $");
             scanf("%f",&breakfast);
-            breakfastCost[i] = breakfast;
+            totalMealExpense += breakfast;
             if(breakfast<0)
                 printf("Amount cannot be negative!\n");
         }
@@ -179,7 +185,7 @@ int main()
         while(lunch<0){
             printf("Lunch: $");
             scanf("%f",&lunch);
-            lunchCost[i] = lunch;
+            totalMealExpense += lunch;
             if(lunch<0)
                 printf("Amount cannot be negative!\n");
         }
@@ -188,7 +194,7 @@ int main()
         while(dinner<0){
             printf("Dinner: $");
             scanf("%f",&dinner);
-            dinnerCost[i] = dinner;
+            totalMealExpense += dinner;
             if(dinner<0)
                 printf("Amount cannot be negative!\n");
         }
@@ -198,15 +204,15 @@ int main()
     }
 
     // The amounts of allowable meals
-    printf("The amounts of allowable meals: $");
+    printf("The amounts of allowable meals: ");
     scanf("%f",&allowableMealAmount);
-
+   
     while(allowableMealAmount<0){
         printf("\nAmount cannot be negative!");
         printf("\nThe amounts of allowable meals: $");
         scanf("%f",&allowableMealAmount);
     }
-    
+
 }
 
 bool timeFormat(char validTime[]){
